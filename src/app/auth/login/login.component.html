@@ -2,7 +2,7 @@
   <div class="card-body">
     <h5 class="card-title">Войдите</h5>
     <div class="auth-context">
-        <form [formGroup]="loginForm">
+        <form [formGroup]="loginForm" (submit)="onSubmit()">
             <div class="form-group">
               <label for="id-login">Логин:</label>
               <input type="text" class="form-control" formControlName="login" id="id-login">

@@ -7,18 +7,23 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
 
   constructor(private fb: FormBuilder) { }
-
+  loginForm: FormGroup;
+    private void;
   ngOnInit() {
     this.initForm();
   }
-  initForm(){
+  initForm() {
     this.loginForm = this.fb.group({
-      ligin: [null],
+      login: [null],
       password: [null]
     });
+  }
+  public onSubmit(): void {
+    const controls = this.loginForm.controls;
+    console.log(controls.login.value);
+    console.log(controls.password.value);
   }
 
 }

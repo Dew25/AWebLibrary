@@ -1,35 +1,35 @@
 <div class="card registration-center">
   <div class="card-body">
     <h5 class="card-title">Зарегистрируйтесь</h5>
-    <div class="context">
-        <form>
+    <div class="auth-context">
+        <form [formGroup]="registrationForm">
             <div class="form-group">
               <label for="id-name">Имя:</label>
-              <input type="text" class="form-control" name="name" id="id-name">
+              <input type="text" class="form-control" formControlName="name" id="id-name">
             </div>
             <div class="form-group">
               <label for="id-surname">Фамилия:</label>
-              <input type="text" class="form-control" name="surname" id="id-surname">
+              <input type="text" class="form-control" formControlName="surname" id="id-surname">
             </div>
             <div class="form-group">
               <label for="id-phone">Телефон:</label>
-              <input type="text" class="form-control" name="phone" id="id-phone">
+              <input type="text" class="form-control" formControlName="phone" id="id-phone">
             </div>
             <div class="form-group">
               <label for="id-city">Город:</label>
-              <input type="text" class="form-control" name="city" id="id-city">
+              <input type="text" class="form-control" formControlName="city" id="id-city">
             </div>
             <div class="form-group">
               <label for="id-login">Логин:</label>
-              <input type="text" class="form-control" name="login" id="id-login">
+              <input type="text" class="form-control" formControlName="login" id="id-login">
             </div>
             <div class="form-group">
               <label for="id-password1">Пароль:</label>
-              <input type="text" class="form-control" name="password1" id="id-password1">
+              <input type="text" class="form-control" formControlName="password1" id="id-password1">
             </div>
             <div class="form-group">
               <label for="id-password2">Повторите пароль:</label>
-              <input type="text" class="form-control" name="password3" id="id-password3">
+              <input type="text" class="form-control" formControlName="password2" id="id-password2">
             </div>
             <button type="submit"  class="btn btn-primary">Зарегистрировать</button>
           </form>
